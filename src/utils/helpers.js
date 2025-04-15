@@ -14,6 +14,13 @@ export function calculateResourceYield(resourceType, landType) {
     return yieldMap[resourceType][landType] || 0;
 }
 
+export function formatTime(seconds) {
+    const hours = Math.floor(seconds / 3600);
+    const minutes = Math.floor((seconds % 3600) / 60);
+    const secs = seconds % 60;
+    return `${hours}h ${minutes}m ${secs}s`;
+}
+
 export function formatNumber(num) {
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }

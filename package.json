@@ -1,0 +1,32 @@
+{
+  "name": "strategy-game-project",
+  "version": "1.0.0",
+  "description": "An infinite strategy game where players explore, collect resources, and build their empire.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "webpack serve --mode development",
+    "build": "webpack --mode production",
+    "test": "jest"
+  },
+  "keywords": [
+    "strategy",
+    "game",
+    "infinite",
+    "resources",
+    "building"
+  ],
+  "author": "Timothy Tripp",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.6.0"
+  },
+  "devDependencies": {
+    "jest": "^27.0.6",
+    "babel-loader": "^8.2.3",
+    "babel-preset-react": "^6.24.1"
+  }
+}

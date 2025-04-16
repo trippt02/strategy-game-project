@@ -5,6 +5,10 @@ import { Resources } from './components/Resources';
 import { Buildings } from './components/Buildings';
 import { UI } from './components/UI';
 
+app.get('/src/app.js', (req, res) => {
+    res.set('Content-Type', 'application/javascript'); // Set the correct MIME type
+    res.sendFile(__dirname + '/src/app.js'); // Or however you are serving the file
+  });
 class Game {
     constructor() {
         this.map = new Map();
@@ -29,6 +33,8 @@ class Game {
     update() {
         this.resources.update();
         this.buildings.update();
+        this.map.update();
+        this.ui.update();
         // Additional game state updates can be added here
     }
 

@@ -6,7 +6,7 @@ export class Resources {
         this.wood = 100;
         this.stone = 50;
         this.ore = 20;
-        this.grain = 30;
+        this.Wheat = 30;
     }
 
     collectResource(type, amount) {
@@ -26,7 +26,7 @@ export class Resources {
                 <div>Wood: <span id="wood-count">${this.wood}</span></div>
                 <div>Stone: <span id="stone-count">${this.stone}</span></div>
                 <div>Ore: <span id="ore-count">${this.ore}</span></div>
-                <div>Grain: <span id="grain-count">${this.grain}</span></div>
+                <div>Wheat: <span id="Wheat-count">${this.Wheat}</span></div>
             `;
         }
     }
@@ -37,7 +37,7 @@ export class Resources {
 //         wood: 0,
 //         stone: 0,
 //         ore: 0,
-//         grain: 0,
+//         Wheat: 0,
 //     });
 
 //     const collectResource = (type, amount) => {
@@ -64,7 +64,7 @@ export class Resources {
 //                 <li>Wood: {resources.wood}</li>
 //                 <li>Stone: {resources.stone}</li>
 //                 <li>Ore: {resources.ore}</li>
-//                 <li>Grain: {resources.grain}</li>
+//                 <li>Wheat: {resources.Wheat}</li>
 //             </ul>
 //         </div>
 //     );

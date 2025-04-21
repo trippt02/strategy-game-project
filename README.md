@@ -46,7 +46,7 @@ strategy-game-project
 
 ## Gameplay Features
 - **Large, Expandable Map**: Explore a massive world with diverse terrains and hidden treasures.
-- **Resource Collection**: Gather essential resources like Wood, Stone, Ore, and Grain.
+- **Resource Collection**: Gather essential resources like Wood, Stone, Ore, and Wheat.
 - **Building Upgrades**: Construct various buildings and upgrade them to increase production.
 - **Land Expansion**: Discover and unlock new territories for more resources.
 - **Infinite Gameplay**: The game world continues to expand and offer new challenges indefinitely.

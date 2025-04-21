@@ -9,7 +9,7 @@ export function calculateResourceYield(resourceType, landType) {
         'Wood': { 'Forest': 5, 'Plain': 2 },
         'Stone': { 'Mountain': 4, 'Plain': 1 },
         'Ore': { 'Mountain': 6, 'Plain': 2 },
-        'Grain': { 'Field': 5, 'Plain': 3 }
+        'Wheat': { 'Field': 5, 'Plain': 3 }
     };
     return yieldMap[resourceType][landType] || 0;
 }

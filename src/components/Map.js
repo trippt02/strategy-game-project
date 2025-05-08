@@ -8,12 +8,35 @@ export class Map {
 
     generateInitialMap(width, height) {
         const map = [];
+        const biomes = ['forest', 'desert', 'plains', 'mountains', 'ocean'];
+
         for (let y = 0; y < height; y++) {
             map[y] = [];
             for (let x = 0; x < width; x++) {
-                // Determine terrain randomly or based on a pattern
-                const terrain = Math.random() > 0.8 ? 'mountain' : 'grass';
-                map[y][x] = { terrain, explored: y < 10 && x < 10 }; // Example: some initial area explored
+                const biome = biomes[Math.floor(Math.random() * biomes.length)];
+                let terrain;
+
+                switch (biome) {
+                    case 'forest':
+                        terrain = Math.random() > 0.7 ? 'tree' : 'grass';
+                        break;
+                    case 'desert':
+                        terrain = Math.random() > 0.8 ? 'cactus' : 'sand';
+                        break;
+                    case 'plains':
+                        terrain = Math.random() > 0.9 ? 'flower' : 'grass';
+                        break;
+                    case 'mountains':
+                        terrain = Math.random() > 0.6 ? 'rock' : 'grass';
+                        break;
+                    case 'ocean':
+                        terrain = 'water';
+                        break;
+                    default:
+                        terrain = 'grass';
+                }
+
+                map[y][x] = { biome, terrain, explored: y < 10 && x < 10 };
             }
         }
         return map;
@@ -28,7 +51,7 @@ export class Map {
             rowElement.classList.add('map-row');
             row.forEach((tile, x) => {
                 const tileElement = document.createElement('div');
-                tileElement.classList.add('map-tile', tile.terrain);
+                tileElement.classList.add('map-tile', tile.terrain, tile.biome);
                 if (!tile.explored) {
                     tileElement.classList.add('fog-of-war');
                 }
